@@ -8,9 +8,11 @@ RSpec.describe "PrimeCheckers", type: :request do
     end
 
     it "Successfully calculates and shows if the input is prime" do
-      get '/'
-      fill_in "number", with: "2"
-      
+      visit '/'
+      fill_in "a", with: "2"
+      click_button "Calculate!"
+      expect(page).to have_content('2 is prime!')
+
     end
 
   end

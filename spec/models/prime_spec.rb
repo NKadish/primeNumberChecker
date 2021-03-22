@@ -7,6 +7,16 @@ RSpec.describe Prime, type: :model do
       expect(@result).to be true
     end
 
+    it 'Should return false for 0' do
+      @result = Prime.send(:prime?, '0')
+      expect(@result).to be false
+    end
+
+    it 'Should return false for 1' do
+      @result = Prime.send(:prime?, '1')
+      expect(@result).to be false
+    end
+
     it 'Should return false for a number that is not prime' do
       @result = Prime.send(:prime?, '4')
       expect(@result).to be false
