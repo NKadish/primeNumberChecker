@@ -6,6 +6,7 @@ class PrimeCheckerController < ApplicationController
 
   def new
     @result = Prime.send(:prime?, *[params[:a]])
+    @number = params[:a].to_i
     render :show
   end
   

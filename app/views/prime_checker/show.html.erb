@@ -6,5 +6,9 @@
 <% end %>
 
 <% unless @result.nil? %>
-  <p> = <%= @result %> </p>
+  <% if @result == true %>
+    <p> <%= @number %> is prime! </p>
+  <% else @result == false %>
+    <p> <%= @number %> is not prime! </p>
+  <% end %>
 <% end %>
