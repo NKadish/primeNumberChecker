@@ -1,0 +1,10 @@
+<h1>Check if a number is prime!</h1>
+
+<%= form_for :prime, url: { action: :new }, method: :get do |f|   %>
+  <%= number_field_tag :a, params[:a] %>
+  <%= f.submit 'Calculate!' %>
+<% end %>
+
+<% unless @result.nil? %>
+  <p> = <%= @result %> </p>
+<% end %>
