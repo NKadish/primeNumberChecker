@@ -3,7 +3,7 @@ class Prime
   def self.prime?(a)
     # Turns the input from a string into an integer
     num = a.to_i
-    # Wasn't catching 0 or 1, was saying they were prime, added a catch
+    # Wasn't catching 0 or 1, was bypassing the loop and saying it was true, added a catch
     if num == 0 || num == 1
       return false
     end
