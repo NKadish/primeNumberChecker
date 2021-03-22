@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get '/' => 'prime_checker#show'
   get '/new' => 'prime_checker#new'
 
