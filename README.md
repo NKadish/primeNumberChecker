@@ -28,5 +28,5 @@ The app uses puma to ensure that requests can be handled concurrently by multipl
 
 ## Routes
 
--> GET `\` (main page)
--> GET `\new` (takes in the number and checks for prime)
+- GET `\` (main page)
+- GET `\new` (takes in the number and checks for prime)
