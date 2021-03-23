@@ -5,17 +5,17 @@ class PrimeCheckerController < ApplicationController
   end
 
   def new
-    cache = ActiveSupport::Cache::MemoryStore.new
+    # @cache = ActiveSupport::Cache::MemoryStore.new
     @number = params[:a].to_i
-    if cache.read(params[:a]) == true || cache.read(params[:a]) == false
+    if Rails.cache.read(params[:a]) == 'true' || Rails.cache.read(params[:a]) == 'false'
       puts "hello world"
-      @result = cache.read(params[:a])
+      @result = Rails.cache.read(params[:a])
     else 
       @result = Prime.send(:prime?, params[:a])
-      cache.write(params[:a], @result)
-      cache.write("4", false)
-      puts cache.read(params[:a])
-      puts cache.read("4")
+      Rails.cache.write(params[:a], @result)
+      Rails.cache.write("4", false)
+      puts Rails.cache.read(params[:a])
+      puts Rails.cache.read("4")
     end
     render :show
   end
