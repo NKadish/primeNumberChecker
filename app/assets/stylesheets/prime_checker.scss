@@ -21,6 +21,12 @@ body {
   flex-direction: column;
 }
 
+.num_input {
+  input {
+    width: -webkit-fill-available;
+  }
+}
+
 .submit {
   input {
     color: white;
@@ -28,4 +34,8 @@ body {
     width: -webkit-fill-available;
     margin-top: 10px;
   }
+}
+
+.result {
+  overflow-wrap: anywhere;
 }
