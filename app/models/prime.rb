@@ -4,7 +4,8 @@ class Prime
     # Turns the input from a string into an integer
     num = a.to_i
     # Wasn't catching 0 or 1, was bypassing the loop and saying it was true, added a catch
-    if num == 0 || num == 1
+    # Realized it broke with a negative number, now fixed
+    if num <= 1 
       return false
     end
     # Checks each number up to their sqrt, looks to see if there is no remainder after num % n, if there is it is true for that n 
