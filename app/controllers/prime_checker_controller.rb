@@ -13,7 +13,6 @@ class PrimeCheckerController < ApplicationController
     else 
       @result = Prime.send(:prime?, params[:a])
       Rails.cache.write(params[:a], @result)
-      puts Rails.cache.read(params[:a])
     end
     render :show
   end

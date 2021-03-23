@@ -1,24 +1,24 @@
-# README
+# Prime Checker
+A simple ruby on rails app that allows for a user to input a number and check if it's prime.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
 
-Things you may want to cover:
+- 2.3.5
 
-* Ruby version
+## System dependencies
 
-* System dependencies
+- rails 5.0
+- puma 3.0
+- sass-rails 5.0
+- rspec-rails
+- capybara
 
-* Configuration
+## Configuration
 
-* Database creation
+- Configure the app by running bundle install
+- Start the server with $ rails server
+- If you are running the server on a virtual box, rails server won't let you access localhost:3000/ instead run $ rails server -b 0.0.0.0
 
-* Database initialization
+## Test Suite
+- Run the test sweet through $ bundle exec rspec
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
