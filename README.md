@@ -1,6 +1,8 @@
 # Prime Checker
 A simple ruby on rails app that allows for a user to input a number and check if it's prime.
 
+The app uses puma to ensure that requests can be handled concurrently by multiple sessions. 
+
 ## Ruby version
 
 - 2.3.5
@@ -23,3 +25,8 @@ A simple ruby on rails app that allows for a user to input a number and check if
 ## Test Suite
 - Run the test suite through $ bundle exec rspec
 
+
+## Routes
+
+-> GET `\` (main page)
+-> GET `\new` (takes in the number and checks for prime)
