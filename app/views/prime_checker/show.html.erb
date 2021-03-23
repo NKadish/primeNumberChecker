@@ -1,14 +1,23 @@
-<h1>Check if a number is prime!</h1>
+<div class="page">
+<h1 class="header">Check if a number is prime!</h1>
 
-<%= form_for :prime, url: { action: :new }, method: :get do |f|   %>
-  <%= number_field_tag :a, params[:a] %>
-  <%= f.submit 'Calculate!' %>
+<div>
+<%= form_for :prime, url: { action: :new }, :html => {:class => 'num_form'}, method: :get do |f|   %>
+  <div class="num_input">
+    <%= number_field_tag :a, params[:a] %>
+  </div>
+  <div class="submit">
+    <%= f.submit 'Calculate!' %>
+  <div>
 <% end %>
+</div>
+
+</div>
 
 <% unless @result.nil? %>
   <% if @result == true %>
-    <p> <%= @number %> is prime! </p>
+    <h2 class="result"> <%= @number %> is prime! </h2>
   <% else @result == false %>
-    <p> <%= @number %> is not prime! </p>
+    <h2 class="result"> <%= @number %> is not prime! </h2>
   <% end %>
 <% end %>
