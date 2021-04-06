@@ -15,7 +15,7 @@ class PrimeCheckerController < ApplicationController
     if cached == true || cached == false
       @result = Rails.cache.read(params[:a])
     else 
-      @result = Prime.send(:prime?, params[:a])
+      @result = Prime.prime?(params[:a])
       Rails.cache.write(params[:a], @result)
     end
     render :show
