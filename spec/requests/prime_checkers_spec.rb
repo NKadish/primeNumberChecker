@@ -16,4 +16,19 @@ RSpec.describe "PrimeCheckers", type: :request do
     end
 
   end
+
+  describe "Cache checker" do
+    it "Actually uses the cache" do
+      @result = Rails.cache.read('5')
+      expect(@result).to be nil
+    end
+
+    it "Can successfully write and retreive from the cache" do
+      Rails.cache.write('4', false)
+      @result = Rails.cache.read('4')
+      expect(@result).to be false
+
+    end
+    
+  end
 end
