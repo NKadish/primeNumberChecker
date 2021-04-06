@@ -12,8 +12,9 @@ class PrimeCheckerController < ApplicationController
     # if @number == 2
     #   sleep(120)
     # end
-    if cached == true || cached == false
+    if !cached.nil?
       @result = Rails.cache.read(params[:a])
+      puts @result
     else 
       @result = Prime.prime?(params[:a])
       Rails.cache.write(params[:a], @result)
